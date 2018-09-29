@@ -1,0 +1,50 @@
+1 variable donde se contendran los tweets
+2 ordenar a) variables b) event listeners c) funciones
+3 event listeners en una función para no estar disponibles globalmente
+
+event listener
+4 cuando se envia el formulario - submit 
+5 crear funcion para agregar tweet
+5.1 prevenir acción por default 
+5.2 probar con console.log
+5.3 leer valor de textarea
+6 crear elemento <li> y añadir contenido a la lista
+7 crear boton eliminar <a> clase borrar-tweet 
+ 
+delegation - borrar tweets
+8 event listener clic borrarTarea
+9 crear funcion borrarTarea
+9.1 prevenir default
+9.2 probar console.log
+10 e.target.className === borrartweet, detectar cuando se de clic en clase borrar-tweet
+11 eliminar li con parentelement 
+
+local storage
+12 en agregarTarea agregarTareaLocalStorage(tarea)
+13 en agregarTareaLocalStorage leer tarea
+14 enviar a ls key tarea value tarea;
+Debido a las caracteristicas de LS, hay que enviar cada tarea como parte de un arreglo
+15 crear funcion obtenertareasLS
+15. revisar valores de ls getitem === null si es vacio, inicia con arreglo vacio, sino, leer tareas y pasarlas como parametro a JSON.parse, retornar valor de tareas
+16. en agregarTareaLocalStorage(tarea) leer tareas y ejecutar obtenertareasLS
+17 añadir nueva tarea con .push(tarea)
+18 convertir de string a arreglo con ls  setItem 'tereas' json.stringify(tareas)
+
+cargando tareas de LS
+19 event listener DOMContentLoaded - localStorageCarga
+20 localStorageCarga leer tareas;
+21 tareas = obtenerls
+22 probar console.log tareas
+23 forEach tareas - tarea {copiar creador de elemntos li y borrar}
+
+eliminar de LS
+24 al eliminar elemento del DOM, borrarLS
+25 crear funcion borrarls(tarea)
+26 prueba con console.log
+27 tareas y tareasBorrar
+28 tareasBorrar = tareas. metodo substring (donde empieza y done corta (total - 1)
+29 tareas se manda a obtenerLS
+30 forEach para tratar el array que viene de LS y borrar el que se requiere 
+31 ls set item tareas json.stringify 
+
+ 	
